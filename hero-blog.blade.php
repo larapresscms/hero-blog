@@ -1,6 +1,6 @@
 <?php
 /* Template Name: Hero Blog
-    Version: 1.0
+    Version: 1.1
 */
 ?>
 {{insertDummyData('Hero Blog',3)}}
@@ -10,7 +10,7 @@
         <div class="col">
             <a href="{{url($post->post_type, $post->slug)}}">
                 <div class="card shadow-sm">
-                    <img src="{{ url('public/uploads/images/',$post->thumbnail_path) ?? ''}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{$post->title}}">
+                    <img src="{!! asset('public/uploads/' . $post->thumbnail_path) ?? '' !!}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{$post->title}}">
                     <div class="card-body">
                         <p class="card-text">{{$post->title}}</p>                
                     </div>
